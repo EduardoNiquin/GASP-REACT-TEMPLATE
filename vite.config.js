@@ -4,7 +4,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "gas", // <-- FOLDER GAS FOR DEPLOYMENT
+    outDir: "gas", // FOLDER TO BUILD
     emptyOutDir: true,
+  },
+  server: {
+    port: 5173, // YOU CAN CHANGE THIS
+    open: true, // OPENS BROWSER
   },
 });
